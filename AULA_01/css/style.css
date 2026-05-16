@@ -1,0 +1,143 @@
+/* Aula 01 - CSS Para pagina de boas vindas 
+Metodoligia: MOBILE-FIRST
+
+-  Estilos base são otimizados para CELULARES (Viewport pequeno)
+- Telas maiores recebem ajustes via Media Queries
+- Garante boas espreriências em qualquer dispositivo
+
+Estrutura do CSS: 
+Estilos Globais (body, fontes)
+Estilos do Header (cabeçalho)
+Estilo da Main (conteudo principal)
+Estilos dos elementos (img, p, a)
+Media queries para desktop (ao final)
+*/
+
+/* Estilos Globais (Base Mobile) */
+
+/* Reset básico de estilos e ajuste do box model para toda a página */
+* {
+    margin: 0; /* remove espaçamentos padrão dos navegadores */
+    padding: 0; /* remove preenchimentos padrão dos navegadores */
+    box-sizing: border-box; /* faz largura/altura incluir bordas e padding */
+}
+
+body {
+
+    /* O body recebe estilos globais que afetam toda a página. */
+    /* Isso melhora a consistência visual e deixa o layout mais simples no mobile. */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Define a familia de fontes padrão para toda a pagina*/
+
+    background-color: #f4f4f4; /*Define a cor de fundo da pagina*/
+
+    color: #333 ;/*Cor padrão dos nossos textos*/
+
+    margin: 0; /*espaçamento externo do elemento*/
+    padding: 0;/*Espaçamento interno do Elemento*/
+
+    text-align: center; /*Alinha todo o texto ao centro*/
+}
+header {
+    background-color: #2c3e50; /* Cor de Fundo*/
+    color: #fff;
+    padding: 30px 15px;
+}
+
+/* O header é a seção de topo da página. */
+/* A cor de fundo escura destaca o título e cria contraste com o restante da página. */
+
+h1 {
+    font-size: 1.8rem;/*Tamanho de fonte (1.8rem = 28.8px)*/
+    font-weight: 700; /* Peso da Fonte ( mais grosso = mais destaques*/
+}
+
+/* O h1 é o título mais importante da página. */
+/* Ele deve ser usado apenas uma vez para manter a hierarquia semântica. */
+
+/* Estilo da Main - (conteúdo principal) */
+
+main {
+    padding: 30px 15px; /*Espaçamento interno do elemento*/
+}
+
+/* Estilos dos Elementos */
+
+/*Estilo para as imagens dentro da main. */
+img {
+    width: 100%; /*A imagem ocupa toda a largura do espaço*/
+    max-width: 300%; /*Garante que a imagem não ultrapasse a largura do container pai*/
+    height: auto; /*Mantém a proporção da imagem ao redimensionar*/
+    border-radius: 10px; /*Adiciona cantos arredondados à imagem*/    
+    margin-bottom: 20px; /*Espaçamento abaixo da imagem*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Adiciona uma sombra suave à imagem para dar profundidade*/
+}
+
+/* Estilos para os parágrafos dentro da main. */
+p {
+    font-size: 1rem; /*Tamanho da fonte (1rem = 16px)*/
+    margin-bottom: 20px; /*Espaçamento abaixo do parágrafo*/
+    line-height: 1.5; /*Altura da linha para melhorar a legibilidade*/
+    color: #555; /*Cor do texto para um contraste suave com o fundo*/
+}
+
+/* Etilos para botão */
+.button {
+    display: block; /*Permite ocupar toda a largura disponível*/
+    padding: 15px; /*Espaçamento interno do botão*/
+    background-color: #c21273; /*Cor de fundo do botão*/
+    color: #fff; /*Cor do texto do botão*/
+    text-decoration: none; /*Remove o sublinhado padrão dos links*/
+    border-radius: 10px; /*Adiciona cantos arredondados ao botão*/
+    transition: background-color 0.3s ease; /*Animação suave para mudança de cor*/
+    font-weight: bold; /*Deixa o texto do botão mais destacado / peso da fonte*/
+    transition: background-color 0.3s ease, transform 0.2s ease; /*Animação suave para mudança de cor e transformação*/
+}
+
+/* Estilos para footer */
+footer {
+    background-color: #2c3e50; /* Cor de Fundo do rodapé */
+    color: #bdc3c7; /* Cor do texto do rodapé */
+    padding: 20px 15px; /*Espaçamento interno do rodapé*/
+    width: 100%; /*Garante que o rodapé ocupe toda a largura da página*/
+    margin-top: 30px; /*Espaçamento acima do rodapé*/
+}
+
+/* Media Queries para Desktop */
+@media (min-width: 768px) {
+    /* Estilos para telas maiores (desktop) */
+
+    header {
+        padding: 40px 30px; /*Aumenta o espaçamento interno do header*/
+    }
+
+    h1 {
+        font-size: 2.5rem; /*Aumenta o tamanho da fonte do título para desktop*/
+    }
+
+    main {
+        padding: 40px 30px; /*Aumenta o espaçamento interno da main*/
+    }
+
+    img {
+        max-width: 700px; /*Permite que a imagem seja maior em telas maiores*/
+    }
+
+    p {
+        font-size: 1.2rem; /*Aumenta o tamanho da fonte dos parágrafos para desktop*/
+        max-width: 600px; /*Limita a largura do título para evitar que fique muito esticado em telas grandes*/
+        margin: 0 auto 30px; /*Centraliza o título horizontalmente e adiciona espaçamento abaixo*/
+    } 
+    .button {
+        display: inline-block; /*Permite que o botão fique ao lado de outros elementos, se necessário*/
+        width: auto; /*Permite que o botão tenha largura automática em telas maiores*/
+        padding: 15px 40px; /*Aumenta o espaçamento interno do botão para desktop*/
+        
+    }     
+    
+    footer {
+        position:fixed; /*Fixa o rodapé na parte inferior da tela*/
+        padding: 30px 30px; /*Aumenta o espaçamento interno do rodapé para desktop*/
+        bottom: 0; /*Garante que o rodapé fique na parte inferior da tela*/
+    }
+}               
