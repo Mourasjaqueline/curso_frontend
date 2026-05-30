@@ -1,0 +1,127 @@
+/* 
+AULA 03 - CSS PARA PÁGINA DE RECEITA
+
+
+TÓPICOS PRINCIPAIS
+
+1. Estilos globais
+2. Container de receita
+3. Títulos e seções
+4. Listas flexiveis
+5. Tabelas responsivas
+6. Media Queries
+*/
+
+/* Estilos Globais */
+
+/* Reset do css padrão do navegador */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfcf0;
+    padding: 15px;
+    color: #4a3728;
+}
+
+/* CONTAINER DE RECEITA */
+.recipe-container {
+    background: #ffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0,0, 0.05);
+}
+
+/* TÍTULOS E SEÇÕES */
+
+h1 {
+    text-align: center; /*Titulo centralizado*/
+    color: #d35400;
+    font-size: 1.5rem;
+}
+
+h2 {
+    color: #2e2118;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* LISTAS FLEXIVEIS */
+
+.flex-list {
+    display: flex; /*ativa o modelo flexbox para esse elemento*/
+    flex-direction: column; /* alinha a direção dos itens ( coluna itens empilhados e row itens lado a lado*/
+    gap: 10px;/*Espaçamento entre itens*/
+    list-style: none; /*Remove o marcador da lista*/
+}
+
+/*Estilo de cada item da lista*/
+.flex-list li {
+    background: #fff3e0;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/*SEÇÔES*/
+.info {
+    /* Se a tela ficar muito larga em mobile, permite scroll horizontal */
+    overflow-x: auto;   
+}
+
+table{
+    width: 100%; /*A tabela ocupa toda a largura do container pai*/
+    min-width: 300px; /*Garante que a tabela não fique muito estreita em telas pequenas*/
+    border-collapse: collapse; /*Remove os espaços entre as bordas das células*/
+    margin-top: 20px; /*Espaçamento acima da tabela*/
+
+}
+th, td {
+    padding: 10px; /*Espaçamento interno das células*/
+    font-size: 0.9rem; /*Tamanho da fonte das células*/
+    border: 1px solid #61280d; /*Borda leve para as células*/    
+    text-align: left; /*Alinhamento do texto à esquerda*/
+}
+th {
+    background-color: #f8c471; /*Cor de fundo para os cabeçalhos*/
+    color: #fff; /*Cor do texto dos cabeçalhos*/
+}    
+
+/* Media Queries para Tablet/desktop */
+@media (min-width: 768px) {
+    .recipe-container {
+        max-width: 800px; /*Limita a largura máxima do container para desktop*/
+        margin: 0 auto; /*Centraliza o container horizontalmente*/
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .flex-list {
+        flex-direction: row; /* está deixando a direção em linhas */
+        flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+        justify-content: center; /* Centraliza os itens horizontalmente */
+    }
+
+    .flex-list li {
+        padding: 10px 20px; /* Ajusta o espaçamento interno dos itens para desktop */
+        border-radius: 50px; /* Deixa os itens mais arredondados para desktop */
+        width: calc(50% - 20px); /* Define a largura dos itens para ocupar metade do container, considerando o gap */
+
+    }
+    th, td {
+       padding: 15px; /* Aumenta o espaçamento interno das células para desktop */
+       font-size: 1rem; /* Aumenta o tamanho da fonte das células para desktop */
+    }
+}

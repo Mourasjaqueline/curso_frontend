@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!--
+AULA 01 - FORMULÁRIO DE INSCRIÇÃO
+OBJETIVO: Criar um fomrulário responsivo e bem estruturado usando HTML semantico-->
+
+<html lang="pt-br"
+<head>
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width", init
+    <title>Aula 04 - Formulário de Inscrição</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <!--WRAPPER DO FORMULÁRIO-->
+    <!-- Div container que centraliza e estiliza o formulário-->
+     <div class="form-wrapper">
+
+        <!--Formulário Principal-->
+        <!--tag semântica <form> indica que é um formulário
+            Atibutos utilizados
+            - method: como enviar os dados  (GET OU POST)
+            -action: onde enviar os dados -->
+
+        <form class="evnt-form">
+            <h2>Inscrição Tech Summit</h2>
+            <!-- Grupo de campos do formulário nome -->
+            <div class="form-group">
+                <!-- Label para o campo de nome
+                 Importante para acessibilidade (for) conecta o label ao input, pq quando o usuário clica no label, o input é focado -->
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+            <!--INPUT TYPE="TEXT" (Campo de Texto)
+            - id: identificador único do campo
+            -type: tipo do campo (=texto simples, email, senha, etc)
+            - name: nome do campo (usado para identificar o campo no servidor)
+            - placeholder: texto de ajuda exibido quando o campo está vazio
+            - required: indica que o campo é obrigatório, ele não pode ser enviado vazio -->
+            </div>
+            <!-- Grupo de campos do formulário e-mail-->
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+        </div>
+        <!-- Grupo de campos do formulário telefone -->
+        <div class="form-group">
+            <label for="phone">Telefone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone">  
+        </div> 
+        
+        <!-- Grupo de campos do formulário select -->
+        <div class="form-group">
+            <label for="area">Área de Interesse</label>
+            <!-- Select para escolher a área de interesse -->
+            <select id="area" name="area" required>
+                <!-- Opção do dropdown 
+                 -value: Valor que será enviado no formulário (NÃO é o usuário que vê) -->
+                <option value="">Selecione uma área</option>
+                <option value="desenvolvimento">Desenvolvimento front-end</option>
+                 <option value="backend">Desenvolvimento Backend</option>
+                <option value="design">Design</option>
+                <option value="marketing">Marketing</option>               
+                <option value="qa">Qualidade Software</option>
+            </select>
+        </div>
+            <!-- Grupo de Textarea (textos longos)-->
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <!-- Textarea permite entrada de mensagens longas
+                 o atributo rows define o número de linhas visíveis (altura da linha inicial) -->
+                <textarea id="message" name="message" placeholder="Deixe uma mensagem ou dúvida" rows="4"></textarea>
+            </div>
+
+        <!-- Botão de envio do formulário -->
+        <!-- type="submit" indica que este botão envia o formulário -->
+        <button type="submit" class="submit-btn">Enviar Inscrição</button>
+        </div>  
+        
+
+        </form> 
+
+     </div>
+</body>

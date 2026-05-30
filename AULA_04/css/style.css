@@ -1,0 +1,80 @@
+/* Aula 04 - CSS Para pagina de boas vindas*/
+/* Metodoligia: MOBILE-FIRST
+
+TOPICOS PRINCIPAIS
+
+1. Estilizações de inputs, botões e formulários
+2. layout com Flexbox para grupos de formulários
+3. Estilização de botões com hover e transições
+4. background e gradientes para destaque visual
+5. sombras para profundidade
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'inter', sans-serif, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333 ;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    /* FlexBOX: Centralizar o formulario
+    -justific-content: center = centralizando horizontalmente  
+    -align-items: center = centralizando verticalmente (mobile para facilitar o scroll) */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+/*  (wrapper) Estilização de Formulários */
+
+.form-wrapper {
+    background-color: #d6cece;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+/* Estilização de Títulos */
+.form-wrapper h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilização de Inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+}
+input, select, textarea {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+input:focus, select:focus, textarea:focus {
+    border-color: #0c0e11;
+    outline: none;
+}
