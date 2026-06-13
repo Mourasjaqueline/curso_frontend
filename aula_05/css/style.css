@@ -1,0 +1,92 @@
+/* Aula 05 - CSS para Layout de noticias
+
+Tópicos principais
+Header com logo e menu de navegação
+Flexbox para organizar o layout principal
+content e sidebar com proporção flexível
+Estilização de cards de notícias    
+Footer 
+responsivo em 992px para desktop
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdfcf0;
+    padding: 15px;
+    color: #000000;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #383f68;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(209, 201, 204);
+}
+
+
+nav ul{
+    text-decoration: none;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    color: rgb(182, 175, 175);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.post img {
+    width: 100%;
+}
+
+.post {
+    background: #fff3e0;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+} 
+.content {
+    flex: 3;
+    margin-right: 20px;
+}
+.sidebar {
+    flex: 1;
+}
+.main-content {
+    display: flex;
+    margin-top: 20px;
+}
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #383f68;
+    color: #fff;
+    margin-top: 20px;
+}
+@media (max-width: 992px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .content, .sidebar {
+        margin-right: 0;
+    }
+}

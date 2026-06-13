@@ -62,12 +62,14 @@ body {
 }
 
 label {
+    /* Alinhamento à esquerda para os rótulos */
     margin-bottom: 5px;
     font-size: 0.9rem;
     font-weight: bold;
     color: #555;
 }
 input, select, textarea {
+    /* Largura total para inputs, selects e textareas */
     padding: 12px;
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -75,6 +77,58 @@ input, select, textarea {
     transition: border-color 0.3s ease;
 }
 input:focus, select:focus, textarea:focus {
+    /* Mudança de cor da borda ao focar nos inputs para melhor usabilidade */
     border-color: #0c0e11;
     outline: none;
+}
+/* Estilização de Botões */
+button {
+    /* Largura automática para se ajustar ao conteúdo do botão */
+    width: auto;
+    padding: 15px;
+    background-color: #a0718b;
+    color: #fff;
+    /* Remover bordas para um visual mais limpo */
+    border: none;
+    /* Bordas arredondadas para um visual mais suave */
+    border-radius: 15px;
+    font-size: 1.1rem;
+    /* Deixar o texto do botão em negrito para melhor destaque */
+    font-weight: bold;
+    /* Espaçamento superior para separar o botão dos campos de formulário */
+    margin-top: 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+/* Aumentar o padding do body para dar mais espaço em telas maiores. É apenas estilizações para quando mudar o tamanho da tela. */
+    body {
+        padding: 40px;
+        align-items: center;
+        /* Gradiente de fundo branco com um nude para dar um destaque visual */
+        background:  linear-gradient(135deg, #f0f0f0, #d6cece);
+    }
+    .form-wrapper {
+        /* Aumentar o padding para dar mais espaço em telas maiores */
+        padding: 40px; 
+        /* Aumentar a sombra para dar mais profundidade */
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        
+    }
+    .form-wrapper h2 {
+        /* Aumentar o tamanho da fonte para títulos em telas maiores */
+        font-size: 1.8rem;
+    }
+    input, select, textarea {
+        /* Aumentar o tamanho da fonte para inputs em telas maiores */
+        font-size: 1.1rem;
+    }
+    button:hover {
+        /* Aumentar o tamanho da fonte e o padding para botões em telas maiores */
+        background-color: #584545;
+        transform: scale(1.05);
+        transition: transform 0.1s ease;        
+    }
 }
