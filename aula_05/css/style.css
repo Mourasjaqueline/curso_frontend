@@ -10,6 +10,12 @@ responsivo em 992px para desktop
 
 */
 
+/*Atividades AGORA
+
+Ajustar o texto do titlo maior e melhorar
+Ajustar os mais lidas, melhorar cor e fundo e organizado
+Ver como fixar o footer*/
+
 *{
     margin: 0;
     padding: 0;
@@ -18,16 +24,18 @@ responsivo em 992px para desktop
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdfcf0;
-    padding: 15px;
     color: #000000;
-}
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh    
+    }
 
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     background-color: #383f68;
     color: #fff;
 }
@@ -36,6 +44,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: rgb(209, 201, 204);
+    margin-bottom: 10px;
 }
 
 
@@ -45,48 +54,120 @@ nav ul{
     justify-content: center;
     align-items: center;
     list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 nav a {
     color: rgb(182, 175, 175);
     text-decoration: none;
     font-size: 1rem;
+    margin-bottom: 10px;
 }
 
+.layout {
+    display: flex; 
+    flex-direction: column; /* Alinha a direção dos itens (coluna itens empilhados e row itens lado a lado) */
+    padding: 15px; /* Espaçamento interno do layout */
+    gap: 20px; /*Espaçamento entre os elementos do layout*/
+    margin-top: 20px; 
+}
 .post img {
     width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
 }
-
+.content, .sidebar {
+    background-color: #ebebee;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    }
 .post {
-    background: #fff3e0;
+    background: #f0eaea;
     padding: 12px;
     border-radius: 8px;
     text-align: center;
     margin-bottom: 20px;
 } 
-.content {
-    flex: 3;
-    margin-right: 20px;
-}
-.sidebar {
-    flex: 1;
-}
-.main-content {
-    display: flex;
-    margin-top: 20px;
-}
-.footer {
+.main-footer {
     text-align: center;
-    padding: 10px;
-    background-color: #383f68;
+    padding: 30px;
+    background-color: #181c33;
     color: #fff;
+    font-size: 0.8rem;
     margin-top: 20px;
+    width: 100%;
+    bottom: 0;
+
 }
-@media (max-width: 992px) {
+
+/* Melhoria nos titulos  "noticias do dia" */
+h1 {
+    text-align: center;
+    margin: 30px 0 20px;
+    color: #0f022e;
+    text-align: center;
+
+}
+/* Melhoria nos titulos de cada noticias */
+.post h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #020520;
+}
+
+/* Melhoria nos parágrafos das noticias */
+.post p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #1f1d1d;
+}
+
+/* Alteração dos marrcdores do "mais lidas" mudei pra quadrado e troquei a cor */
+.sidebar ul {
+    list-style-type: square; /* quadrado */
+    padding-left: 20px; /* espaço à esquerda para os itens da lista */
+    color: #0606ec;
+}
+.sidebar li {
+    margin-bottom: 6px; /* espaço entre os itens da lista */
+}
+.sidebar h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px; /* 200px é MUITO grande */
+    color: #070d3d;
+}
+
+@media (min-width: 992px) {
+  .main-header
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 20px 100px;
+    }
+    /* A classe layout-wr é usada para organizar o layout principal em uma linha (row) com um máximo de largura de 1100px e centralizado na página. */
+    .layout-wrapper {
+        flex-direction: row;
+        display: flex;
+        margin: 40px auto;
+        gap: 40px;
+        max-width: 1100px;
+        flex: 1;
+    }
+    /* A área de conteúdo e a barra lateral ocupam proporções flexíveis  Ocupa 75% do espaco com o (flex:3)*/
     .main-content {
-        flex-direction: column;
+        flex: 3; /* A área de conteúdo ocupa 3 partes do espaço disponível */
     }
-    .content, .sidebar {
-        margin-right: 0;
+    /*  Ocupa 25% do espaco com o (flex:1)*/
+    .sidebar {
+        flex: 1; /* A barra lateral ocupa 1 parte do espaço disponível */
     }
+    
+    
 }
+
+

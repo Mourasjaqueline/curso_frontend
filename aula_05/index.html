@@ -1,69 +1,61 @@
 <!DOCTYPE html>
 
 <html lang="pt-BR">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aula 05 - Layout para noticias</title>
     <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- Cabeçalho -->
     <header class="main-header">
         <!-- O cabeçalho é a parte superior da página, onde geralmente colocamos o título do site e a barra de navegação. Ele é importante para a identidade visual do site e para facilitar a navegação dos usuários. -->
-        <div class="logo" > TechNews </div>
+        <div class="logo"> TechNews </div>
         <!-- Barra de navegação  -->
-        <nav class ="main-nav">
+        <nav class="main-nav">
             <!-- A barra de navegação é uma seção da página que permite aos usuários navegar entre diferentes partes do site. -->
             <ul class="nav-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Mundo</a></li>
-                <li><a href="#">Esportes</a></li>
-                <li><a href="#">Entretenimento</a></li>
-                <li><a href="#">Tecnologia</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Sobre</a></li>
                 <!-- A barra de navegação é importante para a usabilidade do site, pois ajuda os usuários a encontrar facilmente as informações que estão procurando. -->
             </ul>
         </nav>
     </header>
-    
+
     <!-- Wrapper para o layout ( flex: colum no mobile e row no desktop)-->
-    <div class="layout-wrapper">  
+    <div >
         <h1>Notícias do Dia</h1>
-        <!-- Main content - Conteúdo principal -->
-        <main class="main-content">
-            <!-- O conteúdo principal é a parte central da página onde as notícias são exibidas. Ele é importante para fornecer informações relevantes aos usuários e manter o interesse deles no site. -->
-            <article class="post">
-                <h2>Avanços na Tecnologia de IA</h2>
-                <p>A inteligência artificial continua a evoluir, trazendo novas oportunidades e desafios para a sociedade.</p>
-                <img src="./img/ai.jpg" alt="Imagem relacionada à notícia 1" />
-            </article>
-            <article class="post">
-                <h2>Mudanças Climáticas e Seus Impactos</h2>
-                <p>As mudanças climáticas estão afetando o planeta de diversas maneiras, exigindo ações urgentes para mitigar seus efeitos.</p>
-                <img src="./img/mudancas climaticas.jpg" alt="Imagem relacionada à notícia 2" />
-            </article>
-            <article class="post">
-                <h2>Descobertas Científicas Recentes</h2>
-                <p>Cientistas fazem descobertas incríveis que podem revolucionar nossa compreensão do universo.</p>
-                <img src="./img/cientifica.jpg" alt="Imagem relacionada à notícia 3" />
-            </article>
-                </main>  
-<!-- Barra lateral (Aside/Sidebar )-->
- <!--Sessão semantica para conteúdo lateral-->
-        <aside class="sidebar">
-            <!-- A barra lateral é uma seção da página que geralmente contém informações adicionais, como links para outras notícias, categorias ou anúncios. Ela é importante para fornecer conteúdo complementar aos usuários e aumentar o engajamento no site. -->
-            <h3>Mais lidas</h3>
-            <!--Lista de artigos relacionados-->
-            <ul>
-                <li><a href="#">Lançamento do novo iphone</a></li>
-                <li><a href="#">Dicas de CSS Grid</a></li>
-                <li><a href="#">O que é Web3</a></li>
-                <li><a href="#">Entretenimento - Lançamentos de Filmes</a></li>
-                <li><a href="#">Tecnologia - Inovações do Futuro</a></li>
-            </ul>
-        </aside>
+        </div>
+        <div class="layout-wrapper">
+            <!-- Main content - Conteúdo principal -->
+            <main class="main-content">
+                <!-- O conteúdo principal é a parte central da página onde as notícias são exibidas. Ele é importante para fornecer informações relevantes aos usuários e manter o interesse deles no site. -->
+                <article class="post">
+                    <h2>Avanços na Tecnologia de IA</h2>
+                    <p>A inteligência artificial continua a evoluir, trazendo novas oportunidades e desafios para a
+                        sociedade.</p>
+                    <img src="./img/ai.jpg" alt="Imagem relacionada à notícia 1" />
+            </main>
+            <!-- Barra lateral (Aside/Sidebar )-->
+            <!--Sessão semantica para conteúdo lateral-->
+            <aside class="sidebar">
+                <!-- A barra lateral é uma seção da página que geralmente contém informações adicionais, como links para outras notícias, categorias ou anúncios. Ela é importante para fornecer conteúdo complementar aos usuários e aumentar o engajamento no site. -->
+                <h3>Mais lidas</h3>
+                <!--Lista de artigos relacionados-->
+                <ul>
+                    <li><a href="#">Lançamento do novo iphone</a></li>
+                    <li><a href="#">Dicas de CSS Grid</a></li>
+                    <li><a href="#">O que é Web3</a></li>
+                    <li><a href="#">Entretenimento - Lançamentos de Filmes</a></li>
+                    <li><a href="#">Tecnologia - Inovações do Futuro</a></li>
+                </ul>
+            </aside>
+        </div>
     </div>
 
     <!-- Rodapé -->
